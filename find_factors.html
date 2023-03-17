@@ -1,0 +1,25 @@
+<div id="factors">
+<h1>Factors are:-</h1>
+</div>
+<script type="text/javascript">
+	
+	var a = parseInt(prompt("Enter the Number"));
+	for(var i = 1; i <= a; i++){
+		for(var j = a; j >= 1; j--){
+			var b = i*j;
+			if(a == b){
+				var para = document.createElement("b");
+				var node = document.createTextNode(i+", ");
+				para.appendChild(node);
+				var element = document.getElementById("factors");
+				element.appendChild(para);
+			}
+		}			
+	}
+
+</script>
+<style>
+	b{
+		font-size:26px;
+	}
+</style>

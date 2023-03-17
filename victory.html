@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>victory</title>
+	<style type="text/css">
+		body{
+			margin:0;
+			padding:0;
+			font-family:'Poppins', sans-serif;
+		}
+		section{
+			height: 80vh;
+			display: flex;
+			width: 200vh;
+			overflow: hidden;
+			position: relative;
+			background-color: #000;
+		}
+		section .c{
+			position: relative;
+			flex-grow: 2;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			overflow: hidden;
+			transition: 1s;
+		}
+		section:hover .c{
+			opacity: 0.1;
+		}
+		section .c:hover{
+			flex-grow: 5;
+			opacity: 1;
+		}
+		.c:nth-child(1){
+			background-image: url('hulk.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		.c:nth-child(2){
+			background-image: url('thor.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		.c:nth-child(3){
+			background-image: url('ironman.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		.c:nth-child(4){
+			background-image: url('marvel.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		.c:nth-child(5){
+			background-image: url('thanos.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		.c:nth-child(6){
+			background-image: url('panther.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		section .c .content{
+			position: absolute;
+			width: 400px;
+			height: auto;
+			background-color: #fff;
+			padding: 40px;
+			box-sizing: border-box;
+			transform: translateX(100%);
+			transition: 1s;
+			text-align: justify;
+		}
+		section .c:hover .content{
+			transform: translateX(0);
+			transition-delay: 1.5s;
+		}
+		section .c .content h2{
+			margin: 0;
+			padding: 0;
+			font-size: 30px;
+			color:#ed363a;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div class="c">
+			<div class="content">
+				<h2>HULK</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div> 
+		</div>
+		<div class="c">
+			<div class="content">
+				<h2>THOR</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div> 
+		</div>
+		<div class="c">
+			<div class="content">
+				<h2>IRON MAN</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div> 
+		</div>
+		<div class="c">
+			<div class="content">
+				<h2>HULK</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div> 
+		</div>
+		<div class="c">
+			<div class="content">
+				<h2>THOR</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div> 
+		</div>
+		<div class="c">
+			<div class="content">
+				<h2>IRON MAN</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div> 
+		</div>
+	</section>
+</body>
+</html>

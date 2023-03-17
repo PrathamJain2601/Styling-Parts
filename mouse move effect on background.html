@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            background-attachment: fixed;
+            background: url('blur.jpg') center;
+            cursor:none;
+        }
+
+        #cursor {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: url('background.jpg') center;
+            background-attachment: fixed;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cursor"></div>
+    <script>
+        var cursor = document.getElementById('cursor');
+        addEventListener('mousemove', function (e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            cursor.style.left = x + "px";
+            cursor.style.top = y + "px";
+        });
+    </script>
+</body>
+
+</html>

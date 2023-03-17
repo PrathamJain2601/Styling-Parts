@@ -1,0 +1,61 @@
+<input type="number" id="english" placeholder="English">
+<input type="number" id="hindi" placeholder="Hindi">
+<input type="number" id="sst" placeholder="Social science">
+<input type="number" id="science" placeholder="science">
+<input type="number" id="maths" placeholder="maths">
+<input type="submit" value="Submit" onclick="calculate_grade()">
+<script>
+	function calculate_grade(){
+		var english = parseFloat(document.getElementById("english").value);
+		var hindi = parseFloat(document.getElementById("hindi").value);
+		var sst = parseFloat(document.getElementById("sst").value);
+		var science = parseFloat(document.getElementById("science").value);
+		var maths = parseFloat(document.getElementById("maths").value);
+
+		if(english > 80 || hindi > 80 || sst > 80 || science > 80 || maths > 80){
+			alert("Please enter the correct marks");
+		}
+		else{
+			var total_marks = english+hindi+sst+science+maths;
+			var percentage = (total_marks/400)*100;
+
+			if(percentage <= 32){
+				var result = "fail";
+				var grade = "E";
+			}
+			else{
+				var result = "pass";
+
+				if(percentage >= 33 & percentage <= 40){
+					var grade = "D";
+				}
+				else if(percentage >= 41 & percentage <= 50){
+					var grade = "C2";
+				}
+				else if(percentage >= 51 & percentage <= 60){
+					var grade = "C1";
+				}
+				else if(percentage >= 61 & percentage <= 70){
+					var grade = "B2";
+				}
+				else if(percentage >= 71 & percentage <= 80){
+					var grade = "B1";
+				}
+				else if(percentage >= 81 & percentage <= 90){
+					var grade = "A2";
+				}
+				else if(percentage >= 91 & percentage <= 100){
+					var grade = "A1";
+				}
+				else{
+					var grade = "Pehli fursat me nikal";
+				}
+			}
+
+		}
+		// alert(grade);
+		// alert(result);
+		// alert(percentage);
+		alert("Your total score is "+total_marks+" out of 400. You scored "+percentage+" % marks and you are "+grade+" grader.");
+	}
+</script>

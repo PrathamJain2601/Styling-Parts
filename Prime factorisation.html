@@ -1,0 +1,29 @@
+<script>
+	var number = parseInt(prompt("Enter the number"));
+	alert(prime_factorisation(number));
+
+	function prime_factorisation(number){
+		
+		var prime_factors = [];
+		var reduced_number;
+		var working_number;
+		prime_factorisatoin_loop(number);
+
+		function prime_factorisatoin_loop(working_number){
+			for(var i = 2; i <= working_number; i++){
+
+				reduced_number = working_number / i; 
+
+				if(reduced_number === parseInt(reduced_number, 10)){
+					working_number = reduced_number;
+					// alert(working_number);
+					prime_factors.push(i);
+					prime_factorisatoin_loop(working_number);
+					return;
+				}
+			}
+			return(prime_factors);
+		}
+		return prime_factors;
+	}
+</script>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flip checkbox with on off buttons css</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        #center{
+            transform-style: preserve-3d;
+            perspective: 200px;
+            border:2px solid #000;
+            width:100px;
+            height:40px;
+            border-radius: 40px; 
+        }
+        input[type="checkbox"]{
+             position: relative;
+             width:100px; 
+             height: 40px;
+             margin:0;
+             outline:none;
+             -webkit-appearance:none; 
+             transition: 0.5s;
+             cursor:pointer;
+        }
+        span{
+            position: absolute;
+            top:0;
+            width:50%;
+            height:100%;
+            height:40px;
+            line-height:40px;
+            text-align: center;
+            font-weight: bold;
+            pointer-events: none;
+            color: #fff;
+            transform-style:preserve-3d; 
+        }
+        span:nth-child(2){
+            left:0;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+            background:#0f0;
+        }
+        span:nth-child(2):before{
+            content:'';
+            position: absolute;
+            top:0;
+            right:0;
+            width:100%;
+            height:100%;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+            transform-origin:right;
+            transition: 1s;
+            backface-visibility: hidden;
+            background: linear-gradient(90deg,#f00,#f00);
+        }
+        input[type="checkbox"]:checked ~ span:nth-child(2):before{
+            transform: rotateY(180deg);
+        }
+        span:nth-child(3){
+            right:0;
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+            background:#f00;
+        }
+        span:nth-child(3):before{
+            content:'';
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+            transform-origin:left;
+            transition: 1s;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background: linear-gradient(90deg,#0f0,#0f0);
+        }
+        input[type="checkbox"]:checked ~ span:nth-child(3):before{
+            transform: rotateY(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="center">
+        <input type="checkbox">
+        <span>ON</span>
+        <span>OFF</span>
+    </div>
+</body>
+
+</html>

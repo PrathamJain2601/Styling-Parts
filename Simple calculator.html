@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Calculator</title>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            <h1>Simple Calculator</h1>
+        </legend>
+        <input type="text" name="one" id="one" placeholder="Enter the first number"><br><br>
+        <input type="text" name="two" id="two" placeholder="Enter the second number"><br><br>
+        <input type="text" name="calc" id="calc" placeholder="Enter the expression"><br><br>
+        <input type="submit" id="submit">
+    </fieldset>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#submit").click(function () {
+            var one = parseInt($("#one").val());
+            var two = parseInt($("#two").val());
+            var calc = $("#calc").val();
+            if (isNaN(one) != true && isNaN(two) != true) {
+                if(calc == 'a'){
+                    var ans = one + two;
+                    alert(ans);
+                }
+                else if(calc == 's'){
+                    var ans = one - two;
+                    alert(ans);
+                }
+                else if(calc == 'm'){
+                    var ans = one * two;
+                    alert(ans);
+                }
+                else if(calc == 'd'){
+                    var ans = one / two;
+                    alert(ans);
+                }
+                else{
+                    alert("can't find this operation");
+                }
+            }
+            else {
+
+                alert("Please enter a Numeric Value");
+            }
+
+        });
+    });
+</script>
+
+</html>

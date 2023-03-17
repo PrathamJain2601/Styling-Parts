@@ -1,0 +1,48 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d
+}
+.container .card{
+    position: relative;
+    width:220px;
+    height:330px;
+    background:#fff;
+    margin:0 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0.5px 15px rgba(0,0,0,0.1);
+    transition:.5s;
+    overflow:hidden;
+    transform-style:preserve-3d;
+}
+.container:hover .card{
+    transform:perspective(500px) rotateY(45deg);
+}
+.container .card:hover{
+    transform:perspective(500px) rotateY(0deg);
+}
+.container .card:hover ~ .card{
+    transform:perspective(500px) rotateY(-45deg);
+}
+
+.container .card img{
+    height:100%;
+    width:100%;
+}
